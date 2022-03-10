@@ -1,6 +1,7 @@
 import { registerLocaleData } from "@angular/common";
 // Cambiar el locale de la app 
 import localeEs from "@angular/common/locales/es-CO";
+import localeFr from "@angular/common/locales/fr";
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRouterModule } from './app-router.module';
@@ -10,6 +11,7 @@ import { VentasModule } from './ventas/ventas.module';
 
 
 registerLocaleData(localeEs);
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
