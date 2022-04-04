@@ -1,1 +1,16 @@
-<p>ordenar works!</p>
+<div class="text-layout">
+    <h1>Pipes personalizados</h1>
+    <p>
+        Pipes creados por {{ 'nosotros' | mayusculas: enMayusculas }}
+    </p>
+
+    <button 
+        pButton type="button" 
+        label="Toggle Mayusculas" 
+        icon="pi pi-angle-double-up" 
+        iconPos="left" 
+        class="p-button-help"
+        (click)="onMayusculasChanged()"
+        >
+    </button>
+</div>
