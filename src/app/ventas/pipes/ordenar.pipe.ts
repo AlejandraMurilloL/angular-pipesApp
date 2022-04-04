@@ -6,13 +6,19 @@ import { Heroe } from '../interfaces/ventas.interface';
 })
 export class OrdenarPipe implements PipeTransform {
 
-  transform(heroes: Heroe[]): Heroe[] {
-    console.log(heroes);
+  transform(heroes: Heroe[], ordenarPor: string = 'ninguno'): Heroe[] {
 
     // retorno 1 si necesito cambiarlos de lugar 
-    heroes = heroes.sort((a, b) => { return a.nombre > b.nombre ? 1 : -1 });
-    
-    return heroes;
-  }
 
+    switch(ordenarPor){
+      case 'nombre': 
+        return heroes.sort((a, b) => { return a.nombre > b.nombre ? 1 : -1 }); 
+      case 'vuela': 
+        return heroes.sort((a, b) => { return a.vuela > b.vuela ? -1 : 1 }); 
+      case 'color': 
+        return heroes.sort((a, b) => { return a.color > b.color ? 1 : -1 }); 
+      default:
+        return heroes;
+    }
+  }
 }
