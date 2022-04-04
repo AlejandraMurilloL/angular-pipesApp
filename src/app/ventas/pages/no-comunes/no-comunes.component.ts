@@ -39,4 +39,20 @@ export class NoComunesComponent {
     edad: 23,
     ciudad: 'Sogamoso, Colombia'
   }
+
+  // JsonPipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ]
 }
