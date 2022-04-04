@@ -38,7 +38,7 @@
     </div>
 
     <div class="p-col p-md-6">
-        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+        <p-fieldset legend="SlicePipe" [toggleable]="true">
            <b>Original</b>
            <pre>{{ clientes }}</pre>
 
@@ -56,6 +56,17 @@
 
            <b>slice:0:3</b>
            <pre>{{ 'Alejandra' | slice : 0 : 3}}</pre>
+        </p-fieldset>        
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="KeyValuePipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of persona | keyvalue">
+                    <!-- {{ item | json }} -->
+                    <b>{{ item.key | titlecase }}</b>: {{ item.value }}
+                </li>
+            </ul>
         </p-fieldset>        
     </div>
 </div>
